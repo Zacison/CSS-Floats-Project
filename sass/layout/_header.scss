@@ -1,0 +1,36 @@
+
+.header {
+    height: 95vh; /*95% of viewport height*/
+    background-image:linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)), 
+         url(../img/hero.jpg); /*We're currently in the css folder, and need to go up one folder to the project folder, so we use ../, then img for the image folder, and then the actual image */
+    background-size: cover; /*cover - whatever the viewport/element, it will always try to fit the element inside the box */
+    background-position: top; /* Makes sure that whatever the viewport size, the top of the image stays at the top of the container. It can also be bottom, where the bottom stays at the bottom, and center, where it crops both top and bottom. */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo{
+        height: 3.5rem;
+    }
+
+        /* In text box, the top/left work based on the relative position to the parent
+    But, with transform, this is based on the element itself.
+    So, it's perfectly centered based on X/Y translations
+    Negative value means it goes to the left, just like graphs
+    */
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
