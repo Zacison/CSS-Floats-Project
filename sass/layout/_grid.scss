@@ -1,6 +1,6 @@
 .row {
     max-width: $grid-width; //if VW is smaller, it will just fill 100% of the space
-    background-color: #eee;
+   // background-color: #eee;
     margin: 0 auto;
     
 
@@ -14,7 +14,7 @@
     //Selects all the class attributes that start with col-! 
     //Good way to select all cols at the same time
     [class^="col-"] {
-        background-color: orangered;
+      
         float: left;
 
         &:not(:last-child) {
