@@ -8,6 +8,7 @@
          url(../img/hero.jpg); /*We're currently in the css folder, and need to go up one folder to the project folder, so we use ../, then img for the image folder, and then the actual image */
     background-size: cover; /*cover - whatever the viewport/element, it will always try to fit the element inside the box */
     background-position: top; /* Makes sure that whatever the viewport size, the top of the image stays at the top of the container. It can also be bottom, where the bottom stays at the bottom, and center, where it crops both top and bottom. */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
 
@@ -32,5 +33,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+
     }
 }

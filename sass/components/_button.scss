@@ -43,6 +43,15 @@ Next, the transition property - eneables all the transitions in the psuedoclasse
         }
     }
 
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+
         /*Like a child of the button, so the height/width match
     also, we want it to be directly behind the actual button
     so, we use top/left = 0 with absolute positioning, and give the btn-link/visited a relitave position so this can be effected*/
