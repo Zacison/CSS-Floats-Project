@@ -6,6 +6,7 @@ Next, the transition property - eneables all the transitions in the psuedoclasse
 
 */
 .btn {
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -16,6 +17,11 @@ Next, the transition property - eneables all the transitions in the psuedoclasse
         transition: all .2s;
         position: relative;
         font-size: $default-font-size;
+
+
+        //Change for the <button> element
+        border: none;
+        cursor: pointer;
     }    
 
     &:hover {
@@ -29,7 +35,9 @@ Next, the transition property - eneables all the transitions in the psuedoclasse
     }
     
     /*active psuedoclass is for when clicked*/
-    &:active {
+    &:active,
+    &:focus {
+        outline: none;
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
     }
